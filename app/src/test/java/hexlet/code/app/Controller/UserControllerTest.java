@@ -60,7 +60,7 @@ public class UserControllerTest {
     @Test
     public void positiveTestGetUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(get("/users/1"))
+                .perform(get("/users/11"))
                 .andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(200);
         assertThat(response.getContentType()).isEqualTo(MediaType.APPLICATION_JSON.toString());
@@ -70,7 +70,7 @@ public class UserControllerTest {
     @Test
     public void negativeTestGetUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(get("/users/11"))
+                .perform(get("/users/111"))
                 .andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(404);
     }
@@ -91,7 +91,7 @@ public class UserControllerTest {
     @Test
     public void positiveTestUpdateUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(put("/users/1")
+                .perform(put("/users/11")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\n" +
                                 "    \"email\": \"petr@yahoo.com\",\n" +
@@ -108,7 +108,7 @@ public class UserControllerTest {
     @Test
     public void negativeTestUpdateNotExistingUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(put("/users/11")
+                .perform(put("/users/111")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\n" +
                                 "    \"email\": \"petr@yahoo.com\",\n" +
@@ -123,7 +123,7 @@ public class UserControllerTest {
     @Test
     public void negativeTestUpdateInvalidUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(put("/users/1")
+                .perform(put("/users/11")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\n" +
                                 "    \"email\": \"petr@yahoo.com\",\n" +
@@ -138,7 +138,7 @@ public class UserControllerTest {
     @Test
     public void positiveTestDeleteUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(delete("/users/4"))
+                .perform(delete("/users/14"))
                 .andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(200);
 
@@ -153,7 +153,7 @@ public class UserControllerTest {
     @Test
     public void negativeTestDeleteUser() throws Exception {
         MockHttpServletResponse response = mockMvc
-                .perform(delete("/users/11"))
+                .perform(delete("/users/111"))
                 .andReturn().getResponse();
         assertThat(response.getStatus()).isEqualTo(404);
     }
