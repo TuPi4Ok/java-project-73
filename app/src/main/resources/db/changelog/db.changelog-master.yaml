@@ -4,7 +4,7 @@ databaseChangeLog:
        author:  ivan
        changes:
          -  createTable:
-              tableName:  users
+              tableName:  my_users
               columns:
                 -  column:
                      name:  id
@@ -14,13 +14,11 @@ databaseChangeLog:
                        primaryKey:  true
                        nullable:  false
                 -  column:
-                     name:  firstname
+                     name:  first_name
                      type:  varchar(50)
                 -  column:
-                     name:  lastname
+                     name:  last_name
                      type:  varchar(50)
-                     constraints:
-                       nullable:  false
                 - column:
                     name: email
                     type: varchar(50)
@@ -28,5 +26,5 @@ databaseChangeLog:
                     name: password
                     type: varchar(250)
                 - column:
-                    name: createdAt
+                    name: created_at
                     type: datetime

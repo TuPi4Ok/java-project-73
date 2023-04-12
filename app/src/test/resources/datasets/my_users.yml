@@ -1,0 +1,25 @@
+MY_USERS:
+  - id: 1
+    FIRST_NAME: John
+    LAST_NAME: Smith
+    EMAIL: JS123@gg.com
+    PASSWORD: reset555
+    created_at: null
+  - id: 2
+    first_name: Ivan
+    last_name: Ivanov
+    email: II123@gg.com
+    password: reset555
+    created_at: null
+  - id: 3
+    first_name: Vlad
+    last_name: Smith
+    email: VS123@gg.com
+    password: reset555
+    created_at: null
+  - id: 4
+    first_name: Dmitri
+    last_name: Antonov
+    email: DA123@gg.com
+    password: reset555
+    created_at: null
